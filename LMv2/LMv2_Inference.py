@@ -1,6 +1,6 @@
 from PGNet_LMv2_postprocessing import PGNettoLayoutLMv2
 from LMLayout_Classification import layout_classification
-from PGNet_LMv2_postprocessing import post_treatment_structuring
+from After_LMv2_Postprocess import post_treatment_structuring
 import numpy as np
 
 def lm_inference(image,text):
