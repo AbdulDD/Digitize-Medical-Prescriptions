@@ -1,5 +1,6 @@
 from PGNet_LMv2_postprocessing import PGNettoLayoutLMv2
 from LMLayout_Classification import layout_classification
+from PGNet_LMv2_postprocessing import post_treatment_structuring
 import numpy as np
 
 def lm_inference(image,text):
@@ -42,6 +43,8 @@ def lm_inference(image,text):
     #print(Labels)
     # Total_contours_values.clear()
     #print("lminferencetolayoutclassification")
+	 
+	 post_treatment_structuring(PGNet_predicted_boxes, imageN, Transcriptions, Labels)
 
 
     # returns labels
