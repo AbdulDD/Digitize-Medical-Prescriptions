@@ -1,0 +1,4 @@
+# Require libraries instalations for Layout LM v2
+pytesseract
+ultralytics
+transformers
