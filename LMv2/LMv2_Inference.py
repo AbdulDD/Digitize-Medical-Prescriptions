@@ -1,4 +1,5 @@
 from PGNet_LMv2_postprocessing import PGNettoLayoutLMv2
+from LMLayout_Classification import layout_classification
 import numpy as np
 
 def lm_inference(image,text):
@@ -35,7 +36,7 @@ def lm_inference(image,text):
 
     dummy_labels = [np.random.choice(range(12), replace=False) for _ in range(len(text))]
 
-    #labels = layout_classification(imageN,Transcriptions,Normalized_boxes,PGNet_predicted_boxes,dummy_labels)
+    labels = layout_classification(imageN,Transcriptions,Normalized_boxes,PGNet_predicted_boxes,dummy_labels)
     # Uncomment if you wish to see the current labels list!
     # print("LABELS")
     #print(Labels)
@@ -44,4 +45,4 @@ def lm_inference(image,text):
 
 
     # returns labels
-    return imageN, Transcriptions, Normalized_boxes, PGNet_predicted_boxes
+    return labels
