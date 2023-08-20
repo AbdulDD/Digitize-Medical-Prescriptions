@@ -17,7 +17,7 @@ lm_processor = LayoutLMv2Processor.from_pretrained("microsoft/layoutlmv2-base-un
 
 # list, dir_path and model initialization for Layout LM v2
 Labels = []
-lm_model_path = '/content/drive/MyDrive/PGNet/LM_V2_FT_weights'
+lm_model_path = '/content/drive/MyDrive/Digitizing Medical Prescription/LM_V2_FT_weights'
 lm_model = LayoutLMv2ForTokenClassification.from_pretrained(lm_model_path)
 
 # List and index initialization for labeling
