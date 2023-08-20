@@ -43,8 +43,7 @@ def lm_inference(image,text):
     #print(Labels)
     # Total_contours_values.clear()
     #print("lminferencetolayoutclassification")
-	 
-	 post_treatment_structuring(PGNet_predicted_boxes, imageN, Transcriptions, Labels)
+    post_treatment_structuring(PGNet_predicted_boxes, imageN, Transcriptions, labels)
 
 
     # returns labels
