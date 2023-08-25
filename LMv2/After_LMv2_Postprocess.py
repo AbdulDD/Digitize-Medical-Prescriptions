@@ -3,7 +3,7 @@ import json
 
 outer_boxes = []
 
-output_dir = ""
+output_dir = "/content/drive/MyDrive/Digitizing Medical Prescription/pgnet_save_directory/PGNet_LMv2_output"
 
 target_labels = ['DIAGNOSIS', 'MEDICINE DOSE', 'HISTORY']
 labels_list = ["NAME","AGE","GENDER","DATE","DIAGNOSIS","HISTORY","BP","TEMP","WEIGHT","MEDICINE TYPE",
