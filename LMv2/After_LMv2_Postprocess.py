@@ -129,7 +129,9 @@ def post_processing(entry):
 
 
 def post_treatment_structuring(boxes,image,text,lab):
-    entry = {"boundedbox":boxes,
+    label_index.clear()
+	 
+	 entry = {"boundedbox":boxes,
             "image_path": image,
             "text": text,"label":lab}
     print(entry["text"])
