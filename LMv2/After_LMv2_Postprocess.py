@@ -12,6 +12,7 @@ label_index = list()
 
 
 
+
 def post_processing(entry):
 
     image_path = entry['image_path']
@@ -33,6 +34,11 @@ def post_processing(entry):
     }
 
 
+    for i, label in enumerate(label_index):
+      print(entry['text'], i)
+
+
+
     name = ""
     age = ""
     gender = ""
@@ -46,7 +52,10 @@ def post_processing(entry):
         elif labels_list[label] == "GENDER":
             data["patient info"]["GENDER"] = entry['text'][i]
         elif labels_list[label] == "DATE":
-            data["patient info"]["DATE"] = entry['text'][i]
+            try:
+              data["patient info"]["DATE"] = entry['text'][i]
+            except IndexError:
+              pass
 
 
     data["MEDICINE BLOCK"] = create_medicine_blocks(entry)
